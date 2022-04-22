@@ -1,16 +1,5 @@
 <meta charset="utf-8">
 <title>{% if title %}{{ title }} | {% endif %}{{ siteconfig.title }}</title>
-{% if siteconfig.googleAnalytics %}
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ siteconfig.googleAnalytics }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '{{ siteconfig.googleAnalytics }}');
-</script>
-{% endif %}
 <script>
 // Toggle dark/light mode, inline JS to avoid any theme flicker
 function toggleDarkLightMode (isInit) {
